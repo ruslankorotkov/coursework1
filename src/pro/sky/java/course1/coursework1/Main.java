@@ -1,6 +1,7 @@
 package pro.sky.java.course1.coursework1;
-
 public class Main {
+
+
     public static void searchPalindrome(String words) {
         String words1 = words;
         words1 = words.replaceAll("[^A-Za-zА-Яа-я0-9]", "");
