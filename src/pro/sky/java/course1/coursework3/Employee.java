@@ -27,12 +27,13 @@ public class Employee {
         public void setDepartment(int department) {
             this.department = department;
         }
-        public String toString(){
-        return " Employee {"+
-                " , fullNameWorker "+ fullNameWorker+
-                " , salary"+ salary+
-                " , department "+ department+
-                " }";
-        }
 
+    @Override
+    public String toString() {
+        return "Employee {" +
+                " Ф.И.О. = '" + fullNameWorker + '\'' +
+                ", зарплата = " + salary +
+                ", департамент = " + department +
+                '}';
+    }
 }
