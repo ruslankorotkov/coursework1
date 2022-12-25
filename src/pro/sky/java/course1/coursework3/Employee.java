@@ -1,13 +1,19 @@
 package pro.sky.java.course1.coursework3;
 
 public class Employee {
-    public String fullNameWorker;
-    public int salary;
-    public int department;
+    private  int id;
+    private String fullNameWorker;
+    private int salary;
+    private int department;
+    private  static int idCounter = 1;
     public Employee(String fullNameWorker, int salary, int department) {
+        this.id = idCounter++;
         this.fullNameWorker = fullNameWorker;
         this.salary = salary;
         this.department = department;
+    }
+    public int getId(){
+        return id;
     }
         public String getFullNameWorker() {
             return fullNameWorker;
@@ -31,7 +37,8 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee {" +
-                " Ф.И.О. = '" + fullNameWorker + '\'' +
+                " ID = " + id +
+                ", Ф.И.О. = '" + fullNameWorker + '\'' +
                 ", зарплата = " + salary +
                 ", департамент = " + department +
                 '}';

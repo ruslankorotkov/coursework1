@@ -5,8 +5,9 @@ public class Service {
     String words;
     public Service(String words) {
         this.words = words;
+
     }
-    public void printSearchPalindrome(String word) {
+    public void printSearchPalindrome() {
         String word1 = words;
         word1 = words.replaceAll("[^A-Za-zА-Яа-я0-9]", "");
         String string = word1;
