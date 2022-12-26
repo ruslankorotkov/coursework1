@@ -28,17 +28,52 @@ public class Main {
         return total;
     }
 
-    public static void printFullNameWorker(){
+    public static void printFullNameWorker() {
         for (Employee employee : staff) {
             System.out.println(employee.getFullNameWorker());
         }
     }
 
+    public static Employee searchMaxSalary() {
+        Employee result = staff[0];
+        int maxSalary = staff[0].getSalary();
+        for (Employee employee : staff) {
+            if (employee.getSalary() > maxSalary) ;
+            {
+                maxSalary = employee.getSalary();
+                result = employee;
+            }
+        }
+        return result;
+    }
+
+    public static Employee searchMinSalary() {
+        Employee result = staff[0];
+        int minSalary = staff[0].getSalary();
+        for (Employee employee : staff) {
+            if (employee.getSalary() < minSalary) ;
+            {
+                minSalary = employee.getSalary();
+                result = employee;
+            }
+        }
+        return result;
+    }
+    public static int searchAverageSalary(){
+        int total = 0;
+        for (Employee employee : staff) {
+            total += employee.getSalary();
+        }
+        return total / staff.length;
+    }
 
 
     public static void main(String[] args) {
         System.out.println(" Сумма затрат на зарплаты = " + calculateTotalSalary() + " рублей ");
         printStaff();
         printFullNameWorker();
+        System.out.println(" Минимальная  зарплата = " + searchMinSalary() + " рублей ");
+        System.out.println(" Максимальная  зарплата = " + searchMaxSalary() + " рублей ");
+        System.out.println( " Средняя зарплата = " + searchAverageSalary());
     }
 }
