@@ -5,7 +5,6 @@ public class Service {
     String words;
     public Service(String words) {
         this.words = words;
-
     }
     public void printSearchPalindrome() {
         String word1 = words;

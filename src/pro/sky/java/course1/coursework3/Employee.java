@@ -46,6 +46,5 @@ public class Employee {
                 ", зарплата = " + salary +
                 ", департамент = " + department +
                 '}';
-
     }
 }
