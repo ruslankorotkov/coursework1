@@ -3,11 +3,11 @@ package pro.sky.java.course1.coursework3;
 public class Employee {
     private int id;
     private String fullNameWorker;
-    private int salary;
+    private double salary;
     private int department;
     private static int idCounter = 1;
 
-    public Employee(String fullNameWorker, int salary, int department) {
+    public Employee(String fullNameWorker, double salary, int department) {
         this.id = idCounter++;
         this.fullNameWorker = fullNameWorker;
         this.salary = salary;
@@ -22,7 +22,7 @@ public class Employee {
         return fullNameWorker;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -30,7 +30,7 @@ public class Employee {
         return department;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

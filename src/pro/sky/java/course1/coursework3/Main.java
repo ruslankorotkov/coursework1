@@ -1,7 +1,7 @@
 package pro.sky.java.course1.coursework3;
 
 public class Main {
-    private static final Employee[] staff = {
+    private static final Employee[] STAFF = {
             new Employee(" Олег Григорьевич Мирошкин ", 96700, 1),
             new Employee(" Эдуард Николаевич Кожедуб ", 97800, 1),
             new Employee(" Мирослава Петровна Волкова ", 89370, 2),
@@ -15,31 +15,53 @@ public class Main {
     };
 
     public static void printStaff() {
-        for (Employee element : staff) {
+        for (Employee element : STAFF) {
             System.out.println(element);
         }
     }
 
-    public static int calculateTotalSalary() {
-        int total = 0;
-        for (Employee element : staff) {
+    public static double calculateTotalSalary() {
+        double total = 0;
+        for (Employee element : STAFF) {
             total += element.getSalary();
         }
         return total;
     }
 
     public static void printFullNameWorker() {
-        for (Employee element : staff) {
+        for (Employee element : STAFF) {
             System.out.println(element.getFullNameWorker());
         }
     }
 
-    public static int searchAverageSalary() {
-        int total = 0;
-        for (Employee element : staff) {
-            total += element.getSalary();
+    public static double searchAverageSalary() {
+        return calculateTotalSalary() / STAFF.length;
+    }
+
+    public static Employee searchMaxSalary() {
+        Employee result = STAFF[0];
+        double maxSalary = -1;
+        for (Employee element : STAFF) {
+            if (element.getSalary() > maxSalary) ;
+            {
+                maxSalary = element.getSalary();
+                result = element;
+            }
         }
-        return total / staff.length;
+        return result;
+    }
+
+    public static Employee searchMinSalary() {
+        Employee result = STAFF[0];
+        double minSalary = 1_000_000;
+        for (Employee element : STAFF) {
+            if (element.getSalary() < minSalary) ;
+            {
+                minSalary = element.getSalary();
+                result = element;
+            }
+        }
+        return result;
     }
 
 
@@ -48,5 +70,7 @@ public class Main {
         printStaff();
         printFullNameWorker();
         System.out.println(" Средняя зарплата = " + searchAverageSalary() + " рублей ");
+        System.out.println(" Максимальная зарплата = "+ searchMinSalary());
+        System.out.println(" Минимальная зарплата = "+ searchMinSalary());
     }
 }
