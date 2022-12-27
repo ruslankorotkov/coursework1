@@ -7,6 +7,7 @@ public class Employee {
     private int department;
     private static int idCounter = 1;
 
+
     public Employee(String fullNameWorker, double salary, int department) {
         this.id = idCounter++;
         this.fullNameWorker = fullNameWorker;

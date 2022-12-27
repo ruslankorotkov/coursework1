@@ -63,8 +63,6 @@ public class Main {
         }
         return result;
     }
-
-
     public static void main(String[] args) {
         System.out.println(" Сумма затрат на зарплаты = " + calculateTotalSalary() + " рублей ");
         printStaff();
@@ -72,5 +70,6 @@ public class Main {
         System.out.println(" Средняя зарплата = " + searchAverageSalary() + " рублей ");
         System.out.println(" Максимальная зарплата = "+ searchMinSalary());
         System.out.println(" Минимальная зарплата = "+ searchMinSalary());
+
     }
 }
